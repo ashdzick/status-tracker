@@ -1,36 +1,45 @@
 # Status Tracker
 
-A **forkable starter template** for consulting-style weekly status reports.
+A polished weekly status report template you can fork and make yours — without building the layout, stage rails, and PDF-ready HTML from scratch.
 
-You customize it once, then update each week with ChatGPT, Grok, Claude, or any AI — or by hand. One Python command builds a print-ready HTML page (Cmd-P → PDF). No server, no accounts, no npm.
+Aimed at **builders, freelancers, consultants, and anyone** who needs a clean client-facing status update and would rather customize a working starter than invent one.
 
 ```
-Fork → edit config.json → AI updates weekly-status.md → python3 build.py → print PDF
+Fork → edit config.json → AI (or you) update weekly-status.md → python3 build.py → print PDF
 ```
+
+## Why this exists
+
+Status decks and trackers eat time. You already know what’s in flight; you shouldn’t also have to design a report every week.
+
+This gives you:
+
+- A consulting-grade HTML page that prints cleanly to PDF
+- Stage rails, blockers, asks, and week-over-week deltas built in
+- A simple markdown file you (or ChatGPT / Grok / Claude) can update
+- Config you can reshape for kanban, assessment-style stages, or your own vocabulary
+
+Open source: **fork it, edit it, use it on client work.** Don’t sell this template (or a thin reskin of it) as a product.
+
+## How to use
+
+1. **Fork or clone** this repo.
+2. **Configure once** — edit [`config.json`](config.json) (branding, stages, stats). Start from [`config.example.json`](config.example.json) or the [setup prompt](prompts/README.md).
+3. **Fill your engagement** — replace [`weekly-status.md`](weekly-status.md) with your units and week-1 content (or copy [`template.md`](template.md) and fill it in).
+4. **Each week** — update `weekly-status.md` by hand or with the [weekly AI prompt](prompts/README.md), then run `python3 build.py`.
+5. **Send** — open the HTML in a browser → Cmd-P / Ctrl-P → save as PDF.
+
+Vibecoders: open the folder in Cursor (or similar) and ask the agent to apply your notes and run the build.
 
 ## Quick start
 
 ```bash
-git clone <this-repo>
-cd status-tracker   # or whatever you named the folder
+git clone https://github.com/ashdzick/status-tracker.git
+cd status-tracker
 python3 build.py
 ```
 
-Open the HTML file it prints (e.g. `northwind_Weekly_Status_2026-07-15.html`) in a browser.
-
-For your own engagement: edit `config.json` and replace `weekly-status.md` (or use the [setup prompt](prompts/README.md)). Blank starter: [`template.md`](template.md).
-
-## How weekly updates work (AI)
-
-1. Copy your current `weekly-status.md` and this week’s rough notes.
-2. Paste them into ChatGPT / Grok / Claude using the **Weekly update** prompt in [`prompts/README.md`](prompts/README.md).
-3. Replace `weekly-status.md` with the AI output.
-4. Run `python3 build.py`.
-5. Open the HTML → print → save as PDF.
-
-Vibecoders: open the folder in Cursor and ask the agent to apply your notes and run the build.
-
-First-time setup prompt is in the same file.
+Open the HTML file it prints (e.g. `northwind_Weekly_Status_2026-07-15.html`) in a browser to see the demo. Then swap in your config and markdown.
 
 ## Suggested configuration options
 
@@ -186,4 +195,7 @@ Everything stays in your clone. No cloud. Google Fonts load when you open the HT
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Free to fork, modify, and use for your own work (including client deliverables).  
+**Not** free to sell this template — or a thinly modified version of it — as a product.
+
+See [LICENSE](LICENSE).
