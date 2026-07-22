@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+
+# Build outputs and local history
+*.html
+.status-history.json
+
+# Personal seed zip (may contain client data)
+status-tracker.zip

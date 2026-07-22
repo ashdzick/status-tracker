@@ -1,0 +1,32 @@
+{
+  "output_prefix": "northwind_Weekly_Status",
+  "eyebrow": "Northwind Process Assessment  ·  Weekly Status",
+  "footer": "Northwind Process Assessment",
+  "board_heading": "Progress",
+  "asks_heading": "What I need from you",
+  "needs_heading": "Blocked / needs resolution",
+  "summary_heading": "This week",
+  "tbd_heading": "Not started",
+  "tbd_note": "Exact sequencing and tasks to be determined.",
+  "vocabularies": [
+    {
+      "id": "default",
+      "label": "Kanban",
+      "stages": ["Not Started", "In Progress", "Complete"],
+      "short_labels": {
+        "Not Started": "Not started",
+        "In Progress": "In progress",
+        "Complete": "Complete",
+        "On Hold": "On hold"
+      },
+      "wave_prefix": null
+    }
+  ],
+  "stats": [
+    { "id": "week", "label": "Engagement week<br>of {span}", "style": "" },
+    { "id": "units", "label": "Items<br>in scope", "style": "" },
+    { "id": "in_progress", "label": "In<br>progress", "style": "win" },
+    { "id": "complete", "label": "Complete", "style": "win" },
+    { "id": "decisions", "label": "Decisions<br>pending", "style": "" }
+  ]
+}
